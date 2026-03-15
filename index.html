@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Eid Gift 🌙</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --gold: #FFD700;
+            --sky-blue: #1e3799;
+            --deep-night: #0a192f;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom, var(--deep-night) 0%, #1a2a6c 50%, #1e3799 100%);
+            color: white;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        /* --- Night Sky Scene --- */
+        .sky-elements {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.5;
+            animation: twinkle var(--d) infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.3); }
+        }
+
+        .moon {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            width: 80px;
+            height: 80px;
+            background: transparent;
+            border-radius: 50%;
+            box-shadow: 15px 15px 0 0 #fdfbd3;
+            filter: drop-shadow(0 0 20px #fdfbd3);
+            transform: rotate(-15deg);
+        }
+
+        /* Mosque & Kids Silhouettes */
+        .scenery {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 35vh;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            pointer-events: none;
+        }
+
+        .mosque-img {
+            width: 100%;
+            max-width: 600px;
+            opacity: 0.2;
+            filter: brightness(0) invert(1);
+            margin-bottom: -10px;
+        }
+
+        .kids-img {
+            width: 180px;
+            filter: brightness(0);
+            z-index: 3;
+            margin-bottom: 10px;
+        }
+
+        /* --- Main Content Card --- */
+        .main-card {
+            position: relative;
+            z-index: 10;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(15px);
+            padding: 20px;
+            border-radius: 25px;
+            border: 2px solid var(--gold);
+            width: 92%;
+            max-width: 400px;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 0 40px rgba(0,0,0,0.8);
+            animation: slideUp 0.6s ease-out;
+        }
+
+        /* Scrollbar for small phones */
+        .main-card::-webkit-scrollbar { width: 0; }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .photo-frame {
+            width: 100%;
+            border-radius: 15px;
+            border: 2px solid var(--gold);
+            margin-bottom: 15px;
+            cursor: pointer;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+        }
+
+        .float-anim {
+            animation: floatPhoto 3s infinite ease-in-out;
+        }
+
+        @keyframes floatPhoto {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* --- Buttons --- */
+        .btn-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .btn {
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-weight: 800;
+            font-size: 13px;
+            cursor: pointer;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+
+        .btn-wa { background: #25D366; }
+        .btn-fb { background: #1877F2; }
+        .btn-tk { background: #000000; border: 1px solid #fff; grid-column: span 2; }
+        .btn-copy { background: var(--gold); color: black; grid-column: span 2; font-size: 15px; }
+
+        /* Ad Space Styling */
+        .ad-container {
+            margin: 15px 0;
+            background: rgba(255,255,255,0.05);
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+      
