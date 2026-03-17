@@ -1,2 +1,2 @@
-# EID-AL-FITR-
+# eid.al.fatr
 Added to Eid Al FITR 
