@@ -21,7 +21,7 @@
         
         .container { width: 100%; max-width: 350px; padding: 10px; }
         
-        /* Gift Box */
+        /* Gift Box Style */
         .gift-box-wrapper { cursor: pointer; transition: 0.4s; }
         .gift-box-wrapper img { width: 200px; border-radius: 15px; box-shadow: 0 0 20px var(--gold); }
         .hint-text { margin-top: 15px; color: var(--gold); font-weight: bold; animation: blink 1.2s infinite; }
@@ -30,7 +30,7 @@
         #surprise-section { display: none; width: 100%; animation: zoomIn 0.7s forwards; }
         #eid-photo { width: 100%; border-radius: 15px; border: 2px solid var(--gold); box-shadow: 0 0 30px rgba(0,0,0,0.5); }
         
-        /* Share Icons */
+        /* Social Share Icons */
         .share-container { display: flex; margin-top: 20px; gap: 15px; justify-content: center; }
         .share-btn { background: rgba(255,255,255,0.1); border: 1px solid var(--gold); color: white; width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 1.2rem; transition: 0.3s; }
         .share-btn:hover { background: var(--gold); color: black; }
@@ -52,10 +52,10 @@
         </div>
 
         <div id="surprise-section">
-            <img src="https://i.ibb.co/d4Lj5kLL/unnamed-12.jpg" id="eid-photo" alt="Eid Mubarak">
+            <img src="https://i.ibb.co/kVfLLRMz/20260317-115542.jpg" id="eid-photo" alt="Eid Mubarak Surprise">
             
             <div class="share-container">
-                <a href="https://wa.me/?text=Eid%20Mubarak%20Surprise!" target="_blank" class="share-btn"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://wa.me/?text=Eid%20Mubarak%20Surprise%20Check%20Karein!" target="_blank" class="share-btn"><i class="fab fa-whatsapp"></i></a>
                 <a href="https://www.facebook.com/" target="_blank" class="share-btn"><i class="fab fa-facebook-f"></i></a>
                 <a href="https://www.tiktok.com/" target="_blank" class="share-btn"><i class="fab fa-tiktok"></i></a>
             </div>
@@ -64,13 +64,15 @@
 
     <script>
         function openGift() {
-            // Hide box and show photo
+            // Box ko hide karein aur photo dikhayein
             document.getElementById('main-gift').style.display = 'none';
             document.getElementById('surprise-section').style.display = 'block';
             
-            // Start Music
+            // Music Playback
             var audio = document.getElementById('eidMusic');
-            audio.play().catch(function(e) { console.log("Music play blocked"); });
+            audio.play().catch(function(e) { 
+                console.log("Music auto-play blocked by browser. User needs to click first."); 
+            });
         }
     </script>
 </body>
